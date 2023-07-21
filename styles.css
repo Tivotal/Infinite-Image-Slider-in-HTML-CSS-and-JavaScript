@@ -1,0 +1,80 @@
+/* Created by Tivotal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4070f4;
+}
+
+.wrapper {
+  position: relative;
+  height: 400px;
+  max-width: 650px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .button {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  background: #4070f4;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.wrapper .button#prev {
+  left: 25px;
+}
+
+.wrapper .button#next {
+  right: 25px;
+}
+
+.wrapper .button:active {
+  transform: scale(0.94) translateY(-50%);
+}
+
+.wrapper .image-container {
+  height: 320px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapper .image-container .carousel {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transition: 0.4s linear;
+}
+
+.wrapper .image-container .carousel img {
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+  border: 10px solid #fff;
+  object-fit: cover;
+}
